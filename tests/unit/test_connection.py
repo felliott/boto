@@ -539,7 +539,7 @@ class TestHTTPRequest(unittest.TestCase):
         # Ensure the headers at authorization are as expected i.e.
         # the user agent header was not url encoded but the other header was.
         self.assertEqual(mock_connection.headers_at_auth,
-                         {'Some-Header': 'should%20be%20url%20encoded',
+                         {'Some-Header': 'should be url encoded',
                           'User-Agent': UserAgent})
 
     def test_content_length_str(self):
